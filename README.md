@@ -51,6 +51,11 @@ To run tests, use the following command:
 
 If you have any questions about the repository, open an issue or contact me 
 
+## LINKS
+
+- repo: https://github.com/gabinoe/BCC-9-RMGEN
+- pages: https://gabinoe.github.io/BCC-9-RMGEN
+
 
 
 
