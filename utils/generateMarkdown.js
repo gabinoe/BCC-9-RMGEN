@@ -1,13 +1,24 @@
 function renderLicenseBadge(license) {
-  return license !== 'None' ? `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)` : '';
+  if (license !== 'None') {
+    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+  }
+  return '';
 }
 
 function renderLicenseLink(license) {
-  return license !== 'None' ? `\n* [License](#license)\n` : '';
+  if (license !== 'None') {
+    return `\n* [License](#license)\n`;
+  }
+  return '';
 }
 
 function renderLicenseSection(license) {
-  return license !== 'None' ? `## License\n\nThis project is licensed under the ${license} license.` : '';
+  if (license !== 'None') {
+    return `## License
+
+This project is licensed under the ${license} license.`;
+  }
+  return '';
 }
 
 function generateMarkdown(data) {
@@ -58,7 +69,17 @@ ${data.test}
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at [${data.github}](https://github.com/${data.github}/).
+If you have questions about the repo, open an issue or contact me at ${
+    data.email
+  }. You can find more of my work at [${data.github}](https://github.com/${
+    data.github
+  }/).
+
+`;
+}
+
+module.exports = generateMarkdown;
+
 
 `;
 }
